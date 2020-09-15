@@ -1,0 +1,73 @@
+public class Main {
+    String name;
+    int id;
+    String dob;
+    String bloodgrp;
+    String test;
+    int phoneno;
+    String address;
+    int aadhaar;
+    Main(String n, int i, int ph, int aa, String t){
+        name=n;
+        id=i;
+        phoneno=ph;
+        aadhaar=aa;
+        test=t;
+    }
+    Main(String n, int i, int ph, int aa, String t, String db){
+        name=n;
+        id=i;
+        phoneno=ph;
+        aadhaar=aa;
+        test=t;
+        dob=db;
+    }Main(String n, int i, int ph, int aa, String t, String db, String add){
+        name=n;
+        id=i;
+        phoneno=ph;
+        aadhaar=aa;
+        test=t;
+        dob=db;
+        address=add;
+    }
+    Main(String n, int i, int ph, int aa,String t, String db,String add, String bg ){
+        name=n;
+        id=i;
+        phoneno=ph;
+        aadhaar=aa;
+        test=t;
+        dob=db;
+        address=add;
+        bloodgrp= bg;
+    }
+    void display(){
+        System.out.println("Name:"+ name +"\t"+"id:"+id +"\t"+ "Contact mo."+ phoneno +"\n"+
+                "Aadhar card no.:"+ aadhaar +"\n"+ "Test report:"+ test +"\n"+ "Date of birth:"+ dob +"\n"+
+                "Address:"+ address +"\n"+ "Blood Group:"+ bloodgrp+"\n");
+
+    }
+    public static void main(String args[]){
+        Main c1= new Main("abc", 1001, 111111111, 45256889, "positive");
+        Main c2= new Main("abd", 1002, 111122222, 45878952, "positive", "04/10/2001");
+        Main c3= new Main("abe", 1003, 222223333, 78567688, "positive", "04/10/2001", "Aurangabad");
+        Main c4= new Main("abf", 1004, 333333333, 95152688, "positive", "04/10/2001");
+        Main  c5= new Main("xyz", 2005, 444444444, 56271487, "negative","07/09/2003","Delhi","0+ve");
+        Main c6= new Main("pqr", 3006, 111122555, 724856488, "negative","08/10/1999");
+        Main c7= new Main("rst", 4007, 111122666, 458789228, "positive", "07/02/1989","Srinagar");
+        Main c8= new Main("xyw", 1008, 111127777, 897566688, "positive", "25/07/1975","Raipur", "A-ve");
+        Main c9= new Main("ijh", 9009, 111122474, 478502688, "negative");
+        Main c10= new Main("mnl", 1010, 111122475, 25793548, "positive", "16/08/1985","Pune", "B+ve");
+        System.out.println("Covid-19 patients details are:");
+        c1.display();
+        c2.display();
+        c3.display();
+        c4.display();
+        c5.display();
+        c6.display();
+        c7.display();
+        c8.display();
+        c9.display();
+        c10.display();
+
+    }
+}
